@@ -1,8 +1,25 @@
-# static
-Dépôt pour documents de superset.ign.fr
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
 
-## 1/
-pour une mise à jour du document portant le même nom il faut modifier l'adresse:
+<body style="margin:0; background:black;">
 
-devient
+  <video
+    width="100%"
+    height="100%"
+    autoplay
+    muted
+    loop
+    controls
+    playsinline>
 
+    <source
+      src="https://raw.githubusercontent.com/supersetignfr/static/af991fe6a123f7b7c99412c38cfcd746f135c5a6/glacier.mp4"
+      type="video/mp4">
+
+  </video>
+
+</body>
+</html>
