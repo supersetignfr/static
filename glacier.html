@@ -2,7 +2,22 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    http-equiv="Cache-Control"
+    content="no-cache, no-store, must-revalidate">
+
+  <meta
+    http-equiv="Pragma"
+    content="no-cache">
+
+  <meta
+    http-equiv="Expires"
+    content="0">
 
   <title>Vidéo Glacier</title>
 
@@ -27,7 +42,9 @@
 </head>
 
 <body>
+
   <video
+    id="videoGlacier"
     controls
     autoplay
     muted
@@ -35,13 +52,34 @@
     playsinline
     preload="auto">
 
-    <source
-      src="https://supersetignfr.github.io/static/glacier.mp4"
-      type="video/mp4">
+    Votre navigateur ne permet pas la lecture de cette vidéo.
 
-    o.
   </video>
+
+  <script>
+    const video = document.getElementById("videoGlacier");
+
+    /*
+      Date.now() ajoute à l'adresse un numéro différent
+      à chaque ouverture de la page.
+
+      Exemple :
+      glacier.mp4?v=1789984561234
+    */
+
+    video.src =
+      "https://supersetignfr.github.io/static/glacier.mp4?v="
+      + Date.now();
+
+    video.load();
+
+    video.play().catch(function (erreur) {
+      console.log(
+        "La lecture automatique a été bloquée :",
+        erreur
+      );
+    });
+  </script>
+
 </body>
 </html>
-
-
